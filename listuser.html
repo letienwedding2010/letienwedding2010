@@ -31,7 +31,7 @@ th {
 }
 </style>
 <body>
-    <h1>Người tham gia</h1>
+    <!-- <h1>Người tham gia</h1>
   <table id="userTable">
     <tr>
       <th>STT</th>
@@ -46,11 +46,34 @@ th {
       <th>STT</th>
       <th>Name</th>
     </tr>
-  </table>
+  </table> -->
+  <h1>Lời Chúc</h1>
+  <!-- <table id="userTable">
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Lời chúc</th>
+      <th>Number</th>
+    </tr>
+  </table> -->
 
-  <script type="module">
+  <table id="userTable" border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be inserted here -->
+    </tbody>
+</table>
+
+<script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-	import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+	import { getDatabase, ref, set, get, child, update  } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
 	const firebaseConfig = {
       databaseURL: "https://webportfolio-3614e-default-rtdb.asia-southeast1.firebasedatabase.app",
 	  apiKey: "AIzaSyAp2CD9EOidlMdiAqfTH2UIRDpvhaQ5_pY",
@@ -132,9 +155,81 @@ function printVisitData(userData) {
         cell1.innerHTML = userData[user].username;
     }
   }
+}  
+const tableBody = document.querySelector('#userTable tbody');
+var serverData;
+function getWishData(){
+    var listVisitor ;
+    get(child(dbRef, `wish`)).then((snapshot) => {
+    if (snapshot.exists()) {
+        listVisitor = snapshot.val();
+        serverData = listVisitor;
+        renderTable(listVisitor);
+    } else {
+        console.log("No data available");
+    }});
+}
+function listenForChanges() {
+
+  dbRef.onSnapshot((doc) => {
+      if (doc.exists) {
+          const data = doc.data().data;
+          renderTable(data);
+      } else {
+          console.log("No such document!");
+      }
+  });
+}
+async function toggleCensorship(userKey, censoredStatus) {
+  const updatedCensored = !censoredStatus;
+  const updates = {
+      censored: updatedCensored
+  };
+
+  const userRef = ref(db, `wish/${userKey}`);
+
+  await update(userRef, updates)
+  .then(() => {
+      console.log('Censorship status updated successfully');
+      getWishData();
+  })
+  .catch((error) => {
+      console.error('Error updating censorship status: ', error);
+  });
+}
+// Function to render the table
+function renderTable(data) {
+    tableBody.innerHTML = '';
+    var index = 0
+    for (const user in data) {
+      if (data.hasOwnProperty(user)) {
+        index++;
+        var item = data[user]
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.message}</td>
+            <td>${item.censored ? 'Censored' : 'Not Censored'}</td>
+            <td>
+                <button>
+                    ${item.censored ? 'Ẩn' : 'Hiện thị'}
+                </button>
+            </td>
+        `;
+        const button = row.querySelector('button');
+        button.addEventListener('click', () => {
+            toggleCensorship(item.name, item.censored);
+        });
+
+        tableBody.appendChild(row);
+      }
+    }
 }
 
-getAllDatabase()
+
+getWishData();
+
+//getAllDatabase()
   </script>
 </body>
 </html>

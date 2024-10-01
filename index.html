@@ -102,7 +102,7 @@
 					<h2>Xin Chào!</h2>
 					<h3 style="margin-bottom: 0px;">19 - 20/10/2024 </h3>
 					<p>(Tức 17 - 18/09 năm Giáp Thìn)</p>
-					<h3 style="font-size: 20px;">Dốc máy kéo, Nguộn B, Cao Xá, Tân Yên, Bắc Giang.</h3>
+					<!-- <h3 style="font-size: 20px;">Dốc máy kéo, Nguộn B, Cao Xá, Tân Yên, Bắc Giang.</h3> -->
 					<p>Chúng tôi mời bạn đến dự đám cưới của chúng tôi</p>
 				</div>
 			</div>
@@ -132,7 +132,7 @@
 
 	<div id="fh5co-event" class="fh5co-bg" style="background-image: url('images/diachi_bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
 		<div class="overlay"></div>
-		<div class="container">
+		<div class="container row_visit">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Sự kiện đặc biệt của chúng tôi</span>
@@ -146,24 +146,41 @@
 							<div class="col-md-10 col-sm-10 col-xs-12 text-center">
 								<div class="event-wrap animate-box" style='display: flex; justify-content: space-between; padding: 15px; align-items: center;'>
 									<!-- <h3 style="font-family: 'Charmonman', cursive;">Lễ chính</h3> -->
-									<div style='width: 50%; border-right: 1px solid rgb(255 255 255 / 50%);'>
+									<div style='width: 100%; '>
 										<div>
 										<!-- <i class="icon-clock"></i> -->
 										<!-- <span style='font-size: 14px;'>9:00 AM</span> -->
 										</div>
 										<div>
 											<!-- <i class="icon-calendar"></i> -->
-											<div class="text-address"><span>19,20 Tháng 10, 2024</span></div>
+											<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive; font-size: 32px;">Nhà Trai Tại</h1>
+
 											
-											<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>Dốc máy kéo, Nguộn B,&nbsp;</span><span>Cao Xá,</span></div>
+											<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>Đồng Lầm,&nbsp;</span><span>Ngọc Thiện,</span></div>
 											<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span> Tân Yên,&nbsp;</span><span>Bắc Giang.</span></div>
 										</div>
 									</div>
-									<div style='width: 50%;'>
+									<div style='width: 100%; border-right: 1px solid rgb(255 255 255 / 50%);border-left: 1px solid rgb(255 255 255 / 50%);'>
 										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Mạnh Tiến</h1>
 										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; ">&</h1>
 										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Hải Lệ</h1>
+										
 									</div>
+									<div style='width: 100%;'>
+										
+										<div>
+											<!-- <i class="icon-clock"></i>
+											<span style='font-size: 14px;'>9:00 AM</span> -->
+											</div>
+											<div>
+												<!-- <i class="icon-calendar"></i> -->
+												<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive; font-size: 32px;">Nhà Gái Tại</h1>
+												
+												<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>Dốc máy kéo, Nguộn B,&nbsp;</span><span>Cao Xá,</span></div>
+												<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span> Tân Yên,&nbsp;</span><span>Bắc Giang.</span></div>
+											</div>
+									</div>
+
 								</div>
 							</div>
 							<!-- <div class="col-md-6 col-sm-6 text-center">
@@ -297,13 +314,13 @@
 			<span class="modal__close" id="closeModal">&times;</span>
 			<form id="infoForm">
 				<label class="modal__label" for="name">Tên:</label>
-				<input class="modal__input" type="text" id="name" name="name" required>
+				<input class="modal__input" type="text" id="name" name="name" required placeholder="Tên của bạn">
 				
 				<label class="modal__label" for="message">Lời chúc:</label>
-				<textarea class="modal__textarea" id="message" name="message" required></textarea>
+				<textarea class="modal__textarea" id="message" name="message" required maxlength="500" placeholder="Lời chúc không quá 500 ký tự"></textarea>
 
-				<label class="modal__label" for="avatarUrl">Ảnh đại diện (URL):</label>
-                <input class="modal__input" type="text" id="avatarUrl" name="avatarUrl" required>
+				<!-- <label class="modal__label" for="avatarUrl">Ảnh đại diện (URL):</label>
+                <input class="modal__input" type="text" id="avatarUrl" name="avatarUrl" required> -->
 
 
 				<button class="modal__submit" type="submit">Gửi</button>
@@ -319,16 +336,27 @@
 		</div>
 	</div>
 	<div id="fh5co-services" class="fh5co-section-gray">
-		<div class="container">
+		<div class="container row_visit">
 			<div class="row animate-box" style='display: flex; justify-content: center; align-items: center;'>
 				<div class="fh5co-heading col-md-8" style='display: flex; justify-content: center; align-items: center; flex-direction: column;'>
 					<h2>Vị trí tiệc cưới</h2>
-					<div class="mapouter" style="text-align: center; width: auto; width: 80vw; max-width: 600px;">
-						<div class="gmap_canvas" style='width: 80vw; max-width: 600px;'>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2470.052970218036!2d106.10465339973075!3d21.376749769313736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDIyJzM2LjMiTiAxMDbCsDA2JzIxLjkiRQ!5e1!3m2!1svi!2s!4v1727709265989!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-							<!-- <iframe src="https://maps.google.com/maps?q=21.174858,%20106.229153&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 80vw; max-width: 600px; height: 450px;"></iframe><style>.mapouter{position:relative;height:450px;width:600px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org/blooket-host/">blooket host</a><style>.gmap_canvas{overflow:hidden;height:450px;width:600px}.gmap_canvas iframe{position:relative;z-index:2}</style> -->
+					<div class="map_container">
+						<div class="mapouter" style="text-align: center; width: auto;  max-width: 600px;">
+							<h2>Nhà Trai</h2>
+							<div class="gmap_canvas" style='width: 80vw; max-width: 600px;'>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1624.8629463883522!2d106.06165650484462!3d21.35754083808887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313511468c72bf3f%3A0x63378ff52d9ec722!2zQ2jDuWEgTmfhu41jIE5oYW0!5e1!3m2!1svi!2s!4v1727794078665!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								<!-- <iframe src="https://maps.google.com/maps?q=21.174858,%20106.229153&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 80vw; max-width: 600px; height: 450px;"></iframe><style>.mapouter{position:relative;height:450px;width:600px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org/blooket-host/">blooket host</a><style>.gmap_canvas{overflow:hidden;height:450px;width:600px}.gmap_canvas iframe{position:relative;z-index:2}</style> -->
+							</div>
+						</div>
+						<div class="mapouter" style="text-align: center; width: auto;  max-width: 600px;">
+							<h2>Nhà Gái</h2>
+							<div class="gmap_canvas" style='width: 80vw; max-width: 600px;'>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2470.052970218036!2d106.10465339973075!3d21.376749769313736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDIyJzM2LjMiTiAxMDbCsDA2JzIxLjkiRQ!5e1!3m2!1svi!2s!4v1727709265989!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								<!-- <iframe src="https://maps.google.com/maps?q=21.174858,%20106.229153&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 80vw; max-width: 600px; height: 450px;"></iframe><style>.mapouter{position:relative;height:450px;width:600px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org/blooket-host/">blooket host</a><style>.gmap_canvas{overflow:hidden;height:450px;width:600px}.gmap_canvas iframe{position:relative;z-index:2}</style> -->
+							</div>
 						</div>
 					</div>
+					
 					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d328.84310025673733!2d106.22910449792415!3d21.17487268742935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1700901974284!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d328.84310025673733!2d106.22910449792415!3d21.17487268742935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1700901974284!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 				</div>
@@ -467,10 +495,10 @@
 	  measurementId: "G-7JS873SCKQ"
 	};
   
-	// Initialize Firebase
-	// const app = initializeApp(firebaseConfig);
-	// const db = getDatabase(app);
-	// const dbRef = ref(getDatabase());
+	//Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const db = getDatabase(app);
+	const dbRef = ref(getDatabase());
 	
 	//console.log(typeof(db), db);
 	// document.getElementById("submit-attending").addEventListener('click', function(e){
@@ -541,16 +569,10 @@
 		// }
 		const serverData = [
 			{
-				name: 'Tuấn Anh',
+				censored: true,
 				imageUrl: 'images/matminh.jpg',
 				message: 'Chúc mừng đến sự bắt đầu của một chương mới trong cuộc sống của hai bạn. Hãy luôn giữ lửa tình yêu sáng mãi, và những khoảnh khắc đẹp nhất sẽ không bao giờ tan đi.',
-				censored: true
-			},
-			{
-				name: 'Hồng Nhung',
-				imageUrl: 'images/couple-2.jpg',
-				message: 'Mong rằng các bạn sẽ có một cuộc sống hạnh phúc và đầy tình yêu thương.',
-				censored: true
+				name: 'Tuấn Anh'
 			}
 		];
 		var $slider = $('.single-item');
@@ -575,12 +597,12 @@
 		//const popupClose = document.getElementById('popupClose');
 
 		function createCarouselItem(user) {
-			return `
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
+			var text1 = `<div class="item">
+					<div class="testimony-slide active text-center">`;
+			var text2 = `<figure>
 							<img src="${user.imageUrl}" alt="${user.name}">
-						</figure>
+						</figure>`;
+			var text3 = `
 						<span>${user.name}</span>
 						<blockquote>
 							<p>"${user.message}"</p>
@@ -588,6 +610,8 @@
 					</div>
 				</div>
 			`;
+
+			return user.imageUrl == undefined || user.imageUrl == "" ? text1 + text3 : text1 + text2 + text3;
 		}
 		var initDataUserGift = function(dataFromServer){
 			$slider.slick('slickRemove', null, null, true); 
@@ -600,29 +624,46 @@
 			});
 		}
 
-		initDataUserGift(serverData);
-
+		var getDataFromServer = function(){
+			get(child(dbRef, `wish`)).then((snapshot) => {
+				if (snapshot.exists()) {
+					var userData = snapshot.val()
+					console.log("userdata ", userData);
+					for (const user in userData) {
+						console.log("ddđ")
+						if (userData.hasOwnProperty(user)) {
+							var data = { 
+								name: userData[user].name,
+								imageUrl: "",
+								message: userData[user].message,
+								censored: userData[user].censored
+							}
+							console.log("push data", data);
+							serverData.push(data);
+						}
+					}
+				} else {
+					console.log("No data available");
+				}
+				console.log("data ", serverData);
+				initDataUserGift(serverData);
+			});
+		}
+		
+		getDataFromServer();
 		document.getElementById('infoForm').addEventListener('submit', function(event) {
 			event.preventDefault(); // Ngăn form submit mặc định
 
 			// Lấy các giá trị từ form
 			const name = document.getElementById('name').value;
 			const message = document.getElementById('message').value;
-			const avatarUrl = document.getElementById('avatarUrl').value;
 			var data = { 
 				name: name,
-				imageUrl: avatarUrl,
+				imageUrl: "",
 				message: message,
-				censored: true
+				censored: false
 			}
-			serverData.push(data);
-			// set(ref(db, 'visit/' + userNameByE), {
-			// 	username: userNameByE,
-			// 	name: name,
-			//     imageUrl: avatarUrl,
-			//     message: message
-			// });
-			initDataUserGift(serverData);
+			set(ref(db, 'wish/' + name), data);
 			popup.style.display = 'block';
 			document.getElementById('modalOverlay').style.display = 'none';
 
