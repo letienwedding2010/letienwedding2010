@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 405px;
   }
 }
 .fh5co-cover .display-t,
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 600px;
+    height: 500px;
   }
 }
 .fh5co-cover.fh5co-cover-sm {
@@ -935,6 +935,9 @@ form label {
 .simply-countdown {
   /* The countdown */
   margin-bottom: 2em;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0em;
+  }
 }
 
 .simply-countdown > .simply-section {
@@ -950,6 +953,10 @@ form label {
   border-radius: 50%;
   position: relative;
   animation: pulse 1s ease infinite;
+    @media screen and (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+  }
 }
 
 @keyframes pulse {
@@ -981,6 +988,10 @@ form label {
 .simply-countdown > .simply-section .simply-amount {
   font-size: 30px;
   /* amounts */
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    margin-top: -15px;
+  }
 }
 
 .simply-countdown > .simply-section .simply-word {
@@ -1931,6 +1942,9 @@ button:hover {
 .play-button {
   /* Existing styles... */
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    margin-top: -25px;
+}
 }
 
 .progress-container {
@@ -1939,6 +1953,9 @@ button:hover {
   background-color: #f4f4f4; /* Light background for the progress bar container */
   position: relative;
   margin-top: 10px;
+  @media screen and (max-width: 768px) {
+    display: none;
+}
 }
 
 .progress-bar {
@@ -2154,6 +2171,9 @@ hearder{
   display: flex;
   justify-content: space-around;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+}
 }
 /* Responsive cho popup */
 @media (max-width: 768px) {
@@ -2170,7 +2190,7 @@ hearder{
       width: 95%; /* Popup trên màn hình rất nhỏ */
   }
   .row_visit{
-    width: 50%;
+    width: 95%;
   }
 }
 
@@ -2221,3 +2241,13 @@ hearder{
 .slick-dots li.slick-active button {
   background-color: #fff;
 }
+/* .vistit{
+  display: flex; 
+  justify-content: space-between; 
+  padding: 15px; 
+  align-items: center;
+}
+.col-md-12{
+  display: flex; 
+  justify-content: center;
+} */
